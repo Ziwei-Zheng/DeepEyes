@@ -4,29 +4,11 @@
   <img src="docs/logo-deepeyes.jpg" alt="logo" height="100">
   <h1 style="font-size: 32px; font-weight: bold;"> DeepEyes: Incentivizing “Thinking with Images” via Reinforcement Learning </h1>
 
-  <br>
-
-  <a href="https://arxiv.org/abs/2505.14362">
-    <img src="https://img.shields.io/badge/ArXiv-DeepEyes-brown?logo=arxiv" alt="Paper">
-  </a>
-  <a href="https://huggingface.co/datasets/ChenShawn/DeepEyes-Datasets-47k">
-    <img src="https://img.shields.io/badge/🤗 huggingface-Dataset-blue" alt="dataset">
-  </a>
-  <a href="https://huggingface.co/ChenShawn/DeepEyes-7B">
-    <img src="https://img.shields.io/badge/🤗 huggingface-Model-purple" alt="checkpoint">
-  </a>
-  <a href="https://visual-agent.github.io/">
-    <img src="https://img.shields.io/badge/-HomePage-black?logo=github" alt="checkpoint">
-  </a>
 </div>
 
 *\* Logo inspired by oracle bone character "eye".*
 
 ## DeepEyes
-Quote from [https://openai.com/index/thinking-with-images/](https://openai.com/index/thinking-with-images/)
-> They don’t just see an image, they can integrate visual information directly into the reasoning chain.
-
-![](docs/fig2.png)
 
 Key insights:
 - The capability of DeepEyes to think with images is learned via end-to-end reinforcement learning. It is directly guided by outcome reward signals, requires no cold-start or supervised fine-tuning, and does not rely on specialized external model.
@@ -72,7 +54,7 @@ vllm serve /path/to/your/local/filedir \
     --disable-log-requests
 ```
 
-Step 2: Build a ray cluster for all of the training nodes. Prepare data before starting training. Our training dataset can be downloaded from [huggingface](https://huggingface.co/datasets/ChenShawn/DeepEyes-Datasets-47k).
+Step 2: Build a ray cluster for all of the training nodes. Prepare data before starting training. Our training dataset can be downloaded from huggingface.
 
 
 Step 3: Use one of the following scripts to start training.
@@ -155,15 +137,10 @@ Arguments:
 
 ### Code Navigation
 
-Reproduction code for our [DeepEyes](https://arxiv.org/abs/2505.14362).
+Reproduction code for our DeepEyes.
 - Training script: [examples/agent/final_merged_v1v8_thinklite.sh](examples/agent/final_merged_v1v8_thinklite.sh)
 - Tool definition: [verl/workers/agent/envs/mm_process_engine/visual_toolbox_v2.py](verl/workers/agent/envs/mm_process_engine/visual_toolbox_v2.py)
 - Reward definition: [verl/utils/reward_score/vl_agent.py](verl/utils/reward_score/vl_agent.py)
-
-Reproduction code for [R1-Searcher](https://github.com/RUCAIBox/R1-Searcher) using PPO.
-- Training script: [examples/agent/train_ppo_rag_v2.sh](examples/agent/train_ppo_rag_v2.sh)
-- Tool definition: [verl/workers/agent/envs/rag_engine/rag_engine_v2.py](verl/workers/agent/envs/rag_engine/rag_engine_v2.py)
-- Reward definition: [verl/utils/reward_score/agent.py](verl/utils/reward_score/agent.py)
 
 </details> -->
 
@@ -257,24 +234,3 @@ The last time we sync with the verl main branch was on **April 23, 2025**. In th
 Please refer to <a href="eval/EVALUATION.md">EVALUATION.md</a> for evaluation details.
 </details>
 
-## Star Chart
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Visual-Agent/DeepEyes&type=Date)](https://star-history.com/#Visual-Agent/DeepEyes&Date)
-
-## Licence
-
-This project is released under [Apache licence](./LICENSE).
-
-## Citation
-
-```
-@article{zheng2025deepeyesincentivizingthinkingimages,
-    title={DeepEyes: Incentivizing "Thinking with Images" via Reinforcement Learning}, 
-    author={Ziwei Zheng, Michael Yang, Jack Hong, Chenxiao Zhao, Guohai Xu, Le Yang, Chao Shen, Xing Yu},
-    year={2025},
-    eprint={2505.14362},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2505.14362}, 
-}
-```
