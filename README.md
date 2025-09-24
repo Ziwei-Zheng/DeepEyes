@@ -16,7 +16,7 @@ Key insights:
 ![](docs/fig_finding1.svg)
 - The end-to-end RL training yields significant performance gain on high resolution benchmarks, and shows strong generalization for visual grounding, hallucination mitigation, and math problem solving tasks.
 ![](docs/accuracy_comparison.svg)
-- We observed an emergence of thinking pattern during RL training process, such as visual search for small objects, visual comparisons across different regions, using `image_zoom_in_tools` for answer verification, etc. Check [our project homepage](https://visual-agent.github.io/) for more case study.
+- We observed an emergence of thinking pattern during RL training process, such as visual search for small objects, visual comparisons across different regions, using `image_zoom_in_tools` for answer verification, etc.
 ![](docs/fig1_sc2.png)
 
 ##  Quick Start
